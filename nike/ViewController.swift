@@ -37,3 +37,38 @@ class SplashViewController: UIViewController {
         sceneDelegate?.window?.makeKeyAndVisible()
     }
 }
+// https://www.youtube.com/watch?v=eWGu3hcL3ww
+
+/*
+class DataCollectionViewCell: UICollectionViewCell {
+    
+}
+
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+    }
+    
+    override func didRecieveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    
+}
+
+extension ViewController: UICollectionViewFlowLayout {
+    
+}
+*/
