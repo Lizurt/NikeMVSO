@@ -151,6 +151,9 @@ questions for you.</string>
                                     <color key="baseForegroundColor" name="black"/>
                                     <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="jbH-l4-ITG" kind="presentation" id="Nep-nb-fFN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gGl-7E-1Zh"/>
@@ -247,7 +250,7 @@ questions for you.</string>
                 <navigationController id="oSf-FV-oDm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" id="pzB-rD-Csa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gqg-I4-slA">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -263,7 +266,7 @@ questions for you.</string>
             <objects>
                 <tableViewController id="OPt-kV-ksu" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="KFO-r4-hlW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -293,7 +296,7 @@ questions for you.</string>
                 <navigationController id="RJO-pg-DxR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="NonFavorites" id="XWp-nT-3Vz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WAH-Ml-4nV">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
