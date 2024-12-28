@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome View Controller-->
+        <!--Welcome Screen View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="WelcomeScreen" id="Y6W-OH-hqX" customClass="WelcomeViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeScreen" id="Y6W-OH-hqX" customClass="WelcomeScreenViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,16 +24,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-Ha-8bE">
                                 <rect key="frame" x="-25" y="359" width="193" height="159"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8R-ht-Gum">
-                                <rect key="frame" x="25" y="701" width="172" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Join Us" cornerStyle="capsule" titleAlignment="automatic">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                </buttonConfiguration>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PEo-LG-beD">
                                 <rect key="frame" x="25" y="484" width="368" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,6 +42,21 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                     <color key="baseBackgroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8R-ht-Gum">
+                                <rect key="frame" x="25" y="698" width="172" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Join Us" cornerStyle="capsule" titleAlignment="automatic">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="INp-wm-JpL" kind="popoverPresentation" popoverAnchorView="b8R-ht-Gum" id="MPn-eI-5kq">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -79,7 +84,7 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
             <objects>
                 <viewController id="INp-wm-JpL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FCX-LY-OzA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCG-4y-0uk">
@@ -136,7 +141,7 @@ questions for you.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-KQ-8SW">
-                                <rect key="frame" x="100" y="752" width="193" height="50"/>
+                                <rect key="frame" x="100" y="742" width="193" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Bqd-vb-VAo"/>
                                 </constraints>
@@ -160,10 +165,11 @@ questions for you.</string>
                             <constraint firstItem="lHL-KQ-8SW" firstAttribute="leading" secondItem="gGl-7E-1Zh" secondAttribute="leading" constant="100" id="eU7-wH-ANN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YzC-5W-R2k"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wov-5r-0ek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835.87786259541986" y="-29.577464788732396"/>
+            <point key="canvasLocation" x="917" y="-511"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dJh-Rs-rZf">

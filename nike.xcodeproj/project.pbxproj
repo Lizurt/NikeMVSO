@@ -10,13 +10,12 @@
 		A72EB2A32CD6429A00939C01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EB2A22CD6429A00939C01 /* AppDelegate.swift */; };
 		A72EB2A52CD6429A00939C01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EB2A42CD6429A00939C01 /* SceneDelegate.swift */; };
 		A72EB2A72CD6429A00939C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EB2A62CD6429A00939C01 /* ViewController.swift */; };
-		A72EB2AA2CD6429A00939C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72EB2A82CD6429A00939C01 /* Main.storyboard */; };
 		A72EB2AC2CD6429B00939C01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72EB2AB2CD6429B00939C01 /* Assets.xcassets */; };
 		A72EB2AF2CD6429B00939C01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72EB2AD2CD6429B00939C01 /* LaunchScreen.storyboard */; };
 		A72EB2BA2CD6429C00939C01 /* nikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EB2B92CD6429C00939C01 /* nikeTests.swift */; };
 		A72EB2C42CD6429C00939C01 /* nikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EB2C32CD6429C00939C01 /* nikeUITests.swift */; };
 		A72EB2C62CD6429C00939C01 /* nikeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EB2C52CD6429C00939C01 /* nikeUITestsLaunchTests.swift */; };
-		A72EB2D52CD6457700939C01 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72EB2D42CD6457700939C01 /* LoginScreen.storyboard */; };
+		A72EB2D52CD6457700939C01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72EB2D42CD6457700939C01 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		A72EB2A22CD6429A00939C01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A72EB2A42CD6429A00939C01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A72EB2A62CD6429A00939C01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A72EB2A92CD6429A00939C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A72EB2AB2CD6429B00939C01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72EB2AE2CD6429B00939C01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72EB2B02CD6429B00939C01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +48,7 @@
 		A72EB2BF2CD6429C00939C01 /* nikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72EB2C32CD6429C00939C01 /* nikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nikeUITests.swift; sourceTree = "<group>"; };
 		A72EB2C52CD6429C00939C01 /* nikeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nikeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A72EB2D42CD6457700939C01 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
+		A72EB2D42CD6457700939C01 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +102,10 @@
 				A72EB2A22CD6429A00939C01 /* AppDelegate.swift */,
 				A72EB2A42CD6429A00939C01 /* SceneDelegate.swift */,
 				A72EB2A62CD6429A00939C01 /* ViewController.swift */,
-				A72EB2A82CD6429A00939C01 /* Main.storyboard */,
 				A72EB2AB2CD6429B00939C01 /* Assets.xcassets */,
 				A72EB2AD2CD6429B00939C01 /* LaunchScreen.storyboard */,
 				A72EB2B02CD6429B00939C01 /* Info.plist */,
-				A72EB2D42CD6457700939C01 /* LoginScreen.storyboard */,
+				A72EB2D42CD6457700939C01 /* Main.storyboard */,
 			);
 			path = nike;
 			sourceTree = "<group>";
@@ -236,8 +233,7 @@
 			files = (
 				A72EB2AF2CD6429B00939C01 /* LaunchScreen.storyboard in Resources */,
 				A72EB2AC2CD6429B00939C01 /* Assets.xcassets in Resources */,
-				A72EB2D52CD6457700939C01 /* LoginScreen.storyboard in Resources */,
-				A72EB2AA2CD6429A00939C01 /* Main.storyboard in Resources */,
+				A72EB2D52CD6457700939C01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A72EB2A82CD6429A00939C01 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A72EB2A92CD6429A00939C01 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A72EB2AD2CD6429B00939C01 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
