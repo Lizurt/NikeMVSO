@@ -25,7 +25,7 @@ class InterestListViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var buttonNext: UIButton!
 
-    let data: [Interest] = [
+    private let data: [Interest] = [
         Interest(title: "Air Max", imageName: "AirMax"),
         Interest(title: "Baseball", imageName: "Baseball"),
         Interest(title: "Big & Tall", imageName: "BigTall"),
@@ -37,28 +37,15 @@ class InterestListViewController: UIViewController, UITableViewDataSource, UITab
         Interest(title: "Nike Sportswear", imageName: "NikeSportswear")
     ]
     
+    private var chosenItemsCount: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonNext.frame = CGRect(x: 120, y: 0, width: 150, height: 50)
-        buttonNext.frame.size.width = 100
-        buttonNext.frame.size.height = 50
-        buttonNext.layer.cornerRadius = 25
-        buttonNext.backgroundColor = .white
-        buttonNext.setTitle("Next", for: .normal)
-        buttonNext.setTitleColor(.black, for: .normal)
-      
-        view.addSubview(buttonNext)
-        
-        
+        toggleNextButton(available: false)
+
         table.dataSource = self
         table.delegate = self
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // функция, которая оставляет кнопку на месте при пролистывании
-        buttonNext.frame = CGRect(x: 120, y: 0, width: 150, height: 50)
-        buttonNext.frame.origin.y = 750 + scrollView.contentOffset.y
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,25 +60,34 @@ class InterestListViewController: UIViewController, UITableViewDataSource, UITab
         let interest = data[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! InterestItemViewCell
         
-        cell.label.text = interest.title // ссылка на текст лейбл из cell = данные из структуры (описание)
+        cell.label.text = interest.title
         cell.iconImageView.image = UIImage(named: interest.imageName)
         cell.selectionStyle = .none
         cell.radioButton.addTarget(self, action: #selector(button_Select(_:)), for: .touchUpInside)
 
         return cell
-        
     }
     
-    // функция для того чтобы менять изображение на кнопке при нажатии
     @objc func button_Select(_ sender: UIButton) {
         if sender.isSelected == false {
             sender.setBackgroundImage(UIImage(named: "checkButton"), for: .selected)
             sender.isSelected = true
+            chosenItemsCount += 1
         } else {
             sender.setBackgroundImage(UIImage(named: "uncheckButton"), for: .selected)
             sender.isSelected = false
+            chosenItemsCount -= 1
         }
+
+        toggleNextButton(available: isNextButtonAvailable())
+    }
     
+    private func isNextButtonAvailable() -> Bool {
+        return chosenItemsCount > 0
+    }
+    
+    private func toggleNextButton(available: Bool) {
+        buttonNext.isEnabled = available
+        buttonNext.isHidden = !available
     }
 }
- 
