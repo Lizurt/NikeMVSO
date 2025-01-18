@@ -15,21 +15,18 @@ struct CollectionItem {
 
 class ShopController: UIViewController {
     
-    
     @IBOutlet weak var slider: UIView!
     @IBOutlet weak var Men: UIButton!
     @IBOutlet weak var Women: UIButton!
     @IBOutlet weak var Kids: UIButton!
     
-    var selectedButton: UIButton?
-    
+    private var selectedButton: UIButton?
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var collectionCell: [CollectionItem] = [
+    private var collectionCell: [CollectionItem] = [
         CollectionItem(image: UIImage(named: "Image18")!, title: "Best Sellers"),
         CollectionItem(image: UIImage(named: "Image19")!, title: "Featured in Nike Air")
    ]
-
    
     @IBOutlet weak var tableView: UITableView!
     let imageList = ["Image20", "Image9", "ClothesImage"]

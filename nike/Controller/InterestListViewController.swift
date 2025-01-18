@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InterestsListViewController.swift
 //  nike
 //
 //  Created by CSF on 02.11.2024.
@@ -7,66 +7,38 @@
 
 import UIKit
 
-class WelcomeScreenViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+struct Interest {
+    let title: String
+    let imageName: String
 }
 
-class SplashViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.goToMainScreen()
-        }
-    }
-
-    private func goToMainScreen() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        // Идентификатор целевого View Controller'а
-        let mainVC = storyboard.instantiateViewController(withIdentifier: "WelcomeScreen")
-
-        // Установить его как rootViewController
-        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-        sceneDelegate?.window?.rootViewController = mainVC
-        sceneDelegate?.window?.makeKeyAndVisible()
-    }
+class InterestItemViewCell: UITableViewCell {
+    
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var radioButton: UIButton!
 }
-// https://www.youtube.com/watch?v=eWGu3hcL3ww
 
-class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class InterestListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var buttonNext: UIButton!
-          
-    struct Interests {
-        let title: String
-        let imageName: String
-    }
-    
-    let data: [Interests] = [
-        Interests(title: "Air Max", imageName: "AirMax"),
-        Interests(title: "Baseball", imageName: "Baseball"),
-        Interests(title: "Big & Tall", imageName: "BigTall"),
-        Interests(title: "Cross-Training", imageName: "CrossTraining"),
-        Interests(title: "Dance", imageName: "Dance"),
-        Interests(title: "Lacrosse", imageName: "Lacrosse"),
-        Interests(title: "Maternity", imageName: "Maternity"),
-        Interests(title: "N7", imageName: "N7"),
-        Interests(title: "Nike Sportswear", imageName: "NikeSportswear")
+
+    let data: [Interest] = [
+        Interest(title: "Air Max", imageName: "AirMax"),
+        Interest(title: "Baseball", imageName: "Baseball"),
+        Interest(title: "Big & Tall", imageName: "BigTall"),
+        Interest(title: "Cross-Training", imageName: "CrossTraining"),
+        Interest(title: "Dance", imageName: "Dance"),
+        Interest(title: "Lacrosse", imageName: "Lacrosse"),
+        Interest(title: "Maternity", imageName: "Maternity"),
+        Interest(title: "N7", imageName: "N7"),
+        Interest(title: "Nike Sportswear", imageName: "NikeSportswear")
     ]
     
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
-        // настройки для кнопки next
         
         buttonNext.frame = CGRect(x: 120, y: 0, width: 150, height: 50)
         buttonNext.frame.size.width = 100
@@ -94,14 +66,13 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         return data.count
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let interest = data[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! InterestItemViewCell
         
         cell.label.text = interest.title // ссылка на текст лейбл из cell = данные из структуры (описание)
         cell.iconImageView.image = UIImage(named: interest.imageName)
