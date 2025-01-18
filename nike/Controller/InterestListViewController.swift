@@ -55,7 +55,6 @@ class InterestListViewController: UIViewController, UITableViewDataSource, UITab
         table.delegate = self
     }
     
-      
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // функция, которая оставляет кнопку на месте при пролистывании
         buttonNext.frame = CGRect(x: 120, y: 0, width: 150, height: 50)

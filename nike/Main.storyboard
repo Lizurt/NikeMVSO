@@ -15,7 +15,7 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="WelcomeScreen" id="Y6W-OH-hqX" customClass="WelcomeScreenViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeScreen" id="Y6W-OH-hqX" customClass="WelcomeScreenViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,9 +26,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-Ha-8bE">
                                 <rect key="frame" x="-25" y="359" width="193" height="159"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PEo-LG-beD">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEo-LG-beD">
                                 <rect key="frame" x="25" y="484" width="368" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <string key="text">Nike App 
 Bringing Nike Members the best products, inspiration and stories in sport.</string>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -55,7 +59,7 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
                                     <color key="baseBackgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="INp-wm-JpL" kind="presentation" id="1GK-eb-NCg"/>
+                                    <segue destination="INp-wm-JpL" kind="show" id="iyW-u7-Tmv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,11 +84,11 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
             </objects>
             <point key="canvasLocation" x="-156.4885496183206" y="-27.464788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Get Started Screen View Controller-->
         <scene sceneID="zy6-fc-P02">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wov-5r-0ek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="INp-wm-JpL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="INp-wm-JpL" customClass="GetStartedScreenViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FCX-LY-OzA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -129,8 +133,16 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
                                 <rect key="frame" x="201" y="585" width="277" height="304"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eLq-PM-eEn">
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="J4D-cS-ht7" userLabel="Gradient View">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLq-PM-eEn">
                                 <rect key="frame" x="25" y="100" width="343" height="300"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="mj2-dG-hez"/>
                                 </constraints>
@@ -143,9 +155,9 @@ questions for you.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-KQ-8SW">
-                                <rect key="frame" x="100" y="742" width="193" height="50"/>
+                                <rect key="frame" x="100" y="684" width="193" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Bqd-vb-VAo"/>
+                                    <constraint firstAttribute="height" constant="60" id="Bqd-vb-VAo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Get Started" cornerStyle="capsule">
@@ -158,19 +170,25 @@ questions for you.</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="gGl-7E-1Zh"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="lHL-KQ-8SW" secondAttribute="bottom" constant="50" id="2e5-hy-H0f"/>
-                            <constraint firstItem="P12-JS-h3O" firstAttribute="leading" secondItem="gGl-7E-1Zh" secondAttribute="leading" constant="10" id="5bf-yR-w8U"/>
+                            <constraint firstAttribute="bottom" secondItem="lHL-KQ-8SW" secondAttribute="bottom" constant="98" id="2e5-hy-H0f"/>
+                            <constraint firstItem="P12-JS-h3O" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" constant="10" id="5bf-yR-w8U"/>
                             <constraint firstItem="eLq-PM-eEn" firstAttribute="top" secondItem="FCX-LY-OzA" secondAttribute="top" constant="100" id="AMY-Rv-eNZ"/>
-                            <constraint firstItem="gGl-7E-1Zh" firstAttribute="trailing" secondItem="lHL-KQ-8SW" secondAttribute="trailing" constant="100" id="AvE-YZ-ILJ"/>
+                            <constraint firstAttribute="trailing" secondItem="lHL-KQ-8SW" secondAttribute="trailing" constant="100" id="AvE-YZ-ILJ"/>
+                            <constraint firstAttribute="trailing" secondItem="J4D-cS-ht7" secondAttribute="trailing" id="KnO-1T-2w7"/>
                             <constraint firstItem="P12-JS-h3O" firstAttribute="top" secondItem="FCX-LY-OzA" secondAttribute="top" constant="-50" id="VOa-px-edR"/>
                             <constraint firstAttribute="trailing" secondItem="eLq-PM-eEn" secondAttribute="trailing" constant="25" id="dno-yi-kpK"/>
-                            <constraint firstItem="eLq-PM-eEn" firstAttribute="leading" secondItem="gGl-7E-1Zh" secondAttribute="leading" constant="25" id="dtZ-9w-qii"/>
-                            <constraint firstItem="lHL-KQ-8SW" firstAttribute="leading" secondItem="gGl-7E-1Zh" secondAttribute="leading" constant="100" id="eU7-wH-ANN"/>
+                            <constraint firstItem="eLq-PM-eEn" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" constant="25" id="dtZ-9w-qii"/>
+                            <constraint firstItem="lHL-KQ-8SW" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" constant="100" id="eU7-wH-ANN"/>
+                            <constraint firstAttribute="bottom" secondItem="J4D-cS-ht7" secondAttribute="bottom" id="fBU-le-Wat"/>
+                            <constraint firstItem="J4D-cS-ht7" firstAttribute="top" secondItem="FCX-LY-OzA" secondAttribute="top" id="lUj-Mt-dMp"/>
+                            <constraint firstItem="J4D-cS-ht7" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" id="wei-zp-cmY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YzC-5W-R2k"/>
+                    <connections>
+                        <outlet property="gradientView" destination="J4D-cS-ht7" id="JdG-fb-HJe"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="862" y="-27"/>
@@ -192,6 +210,7 @@ questions for you.</string>
         <!--Interest List View Controller-->
         <scene sceneID="FQ1-yh-yv3">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPg-Qo-In2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="ICv-lq-DQR" customClass="InterestListViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="oT7-Bo-aGw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
@@ -211,7 +230,7 @@ questions for you.</string>
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="hp2-CS-7uJ" customClass="CustomTableViewCell" customModule="NikeProgram" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="hp2-CS-7uJ" customClass="InterestItemViewCell" customModule="nike" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="82"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hp2-CS-7uJ" id="tW5-6b-OVQ">
@@ -257,9 +276,9 @@ questions for you.</string>
                                 <color key="backgroundColor" white="0.1005792942" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="iconImageView" destination="zcK-Na-WzT" id="1iS-4X-Fw6"/>
-                                    <outlet property="label" destination="Uot-nm-DZ3" id="xit-wn-FVB"/>
-                                    <outlet property="radioButton" destination="bZ5-Sl-nCN" id="8lx-V1-gOQ"/>
+                                    <outlet property="iconImageView" destination="zcK-Na-WzT" id="0JB-YY-TF9"/>
+                                    <outlet property="label" destination="Uot-nm-DZ3" id="KNw-w0-hPT"/>
+                                    <outlet property="radioButton" destination="bZ5-Sl-nCN" id="Of1-Um-SWp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -274,9 +293,8 @@ questions for you.</string>
                         <outlet property="table" destination="oT7-Bo-aGw" id="aCd-b1-OuB"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pPg-Qo-In2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="-27"/>
+            <point key="canvasLocation" x="1690.8396946564885" y="-27.464788732394368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3xt-sX-gga">

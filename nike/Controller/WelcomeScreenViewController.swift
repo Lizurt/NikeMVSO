@@ -12,10 +12,9 @@ class WelcomeScreenViewController: UIViewController {
     @IBOutlet weak var joinUsButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
-    
-    private let fadeToBlackLayer = CAGradientLayer()
-    private let fadeToBlackArea: [Float] = [0.5, 1]
-    private let fadeToBlackColors: [CGColor] = [
+
+    private let fadeToBlackKeyPoints: [Float] = [0.5, 1]
+    private let fadeToBlackLayerColors: [CGColor] = [
         UIColor.clear,
         UIColor.black
     ].map { $0.cgColor }
@@ -58,9 +57,10 @@ class WelcomeScreenViewController: UIViewController {
     }
     
     private func setUpBackgroundView() {
+        let fadeToBlackLayer = CAGradientLayer()
         fadeToBlackLayer.frame = self.view.frame
-        fadeToBlackLayer.colors = fadeToBlackColors
-        fadeToBlackLayer.locations = fadeToBlackArea.map { NSNumber(value: $0) }
+        fadeToBlackLayer.colors = fadeToBlackLayerColors
+        fadeToBlackLayer.locations = fadeToBlackKeyPoints.map { NSNumber(value: $0) }
         fadeToBlackLayer.startPoint = CGPoint(x: 0.5, y: 0)
         fadeToBlackLayer.endPoint = CGPoint(x: 0.5, y: 1)
         

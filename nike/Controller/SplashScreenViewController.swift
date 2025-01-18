@@ -20,10 +20,10 @@ class SplashScreenViewController: UIViewController {
     private func goToMainScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let mainVC = storyboard.instantiateViewController(withIdentifier: "WelcomeScreen")
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "welcomeScreen")
 
         let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-        sceneDelegate?.window?.rootViewController = mainVC
+        sceneDelegate?.window?.rootViewController = mainViewController
         sceneDelegate?.window?.makeKeyAndVisible()
     }
 }
