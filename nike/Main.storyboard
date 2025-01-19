@@ -285,7 +285,7 @@ questions for you.</string>
                     <navigationItem key="navigationItem" id="qq3-Du-Pse"/>
                     <connections>
                         <outlet property="buttonNext" destination="df0-88-PZR" id="lFk-JB-n6d"/>
-                        <outlet property="interestsTableView" destination="HPc-QX-xJg" id="PQu-f1-dxp"/>
+                        <outlet property="interestsTableView" destination="HPc-QX-xJg" id="fLb-1K-GuT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGc-XA-SeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

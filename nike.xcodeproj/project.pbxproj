@@ -48,6 +48,8 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		C409E37F2D3D4DD6006F69AF /* Provider */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Provider; sourceTree = "<group>"; };
+		C409E3882D3D54A1006F69AF /* Entity */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Entity; sourceTree = "<group>"; };
 		C4F468A82D3BE73E00F3A181 /* BestSeller */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = BestSeller; sourceTree = "<group>"; };
 		C4F468AC2D3BE73E00F3A181 /* Shop */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Shop; sourceTree = "<group>"; };
 		C4F468BF2D3BFF0700F3A181 /* Controller */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Controller; sourceTree = "<group>"; };
@@ -102,6 +104,8 @@
 		A72EB2A12CD6429A00939C01 /* nike */ = {
 			isa = PBXGroup;
 			children = (
+				C409E3882D3D54A1006F69AF /* Entity */,
+				C409E37F2D3D4DD6006F69AF /* Provider */,
 				C4F468C32D3BFF3100F3A181 /* View */,
 				C4F468BF2D3BFF0700F3A181 /* Controller */,
 				C4F468A82D3BE73E00F3A181 /* BestSeller */,
@@ -148,6 +152,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				C409E37F2D3D4DD6006F69AF /* Provider */,
+				C409E3882D3D54A1006F69AF /* Entity */,
 				C4F468A82D3BE73E00F3A181 /* BestSeller */,
 				C4F468AC2D3BE73E00F3A181 /* Shop */,
 				C4F468BF2D3BFF0700F3A181 /* Controller */,
