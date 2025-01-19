@@ -22,10 +22,12 @@ class InterestItemViewCell: UITableViewCell {
 
 class InterestListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var interestsTableView: UITableView!
     @IBOutlet weak var buttonNext: UIButton!
-
-    private let data: [Interest] = [
+    
+    private final let ROW_HEIGHT: CGFloat = 95
+    
+    private let interestItems: [Interest] = [
         Interest(title: "Air Max", imageName: "AirMax"),
         Interest(title: "Baseball", imageName: "Baseball"),
         Interest(title: "Big & Tall", imageName: "BigTall"),
@@ -44,20 +46,20 @@ class InterestListViewController: UIViewController, UITableViewDataSource, UITab
         
         toggleNextButton(available: false)
 
-        table.dataSource = self
-        table.delegate = self
+        interestsTableView.dataSource = self
+        interestsTableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return interestItems.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 95
+        return ROW_HEIGHT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let interest = data[indexPath.row]
+        let interest = interestItems[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! InterestItemViewCell
         
         cell.label.text = interest.title
@@ -87,7 +89,27 @@ class InterestListViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     private func toggleNextButton(available: Bool) {
-        buttonNext.isEnabled = available
-        buttonNext.isHidden = !available
+        if available {
+            showNextButton()
+        } else {
+            hideNextButton()
+        }
+    }
+    
+    private func showNextButton(duration: Float = 0.3) {
+        UIView.animate(withDuration: 0.3) {
+            self.buttonNext.alpha = 1.0
+            self.buttonNext.isEnabled = true
+            self.buttonNext.isHidden = false
+        }
+    }
+    
+    private func hideNextButton(duration: Float = 0.3) {
+        UIView.animate(withDuration: TimeInterval(duration), animations: {
+            self.buttonNext.alpha = 0.0
+        }) { _ in
+            self.buttonNext.isEnabled = false
+            self.buttonNext.isHidden = true
+        }
     }
 }
