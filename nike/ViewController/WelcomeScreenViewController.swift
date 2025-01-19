@@ -13,9 +13,11 @@ class WelcomeScreenViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var backgroundImage: UIImageView!
 
-    private let fadeToBlackKeyPoints: [Float] = [0.5, 1]
+    private let fadeToBlackKeyPoints: [Float] = [0, 0.25, 0.75, 1]
     private let fadeToBlackLayerColors: [CGColor] = [
-        UIColor.clear,
+        UIColor(hex: "#00000033"),
+        UIColor(hex: "#00000066"),
+        UIColor.black,
         UIColor.black
     ].map { $0.cgColor }
     

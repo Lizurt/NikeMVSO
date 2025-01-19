@@ -195,10 +195,10 @@ questions for you.</string>
             </objects>
             <point key="canvasLocation" x="862" y="-27"/>
         </scene>
-        <!--Interest List View Controller-->
+        <!--Interests Screen View Controller-->
         <scene sceneID="SdD-HB-ByB">
             <objects>
-                <viewController id="7xg-X8-pf8" customClass="InterestListViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7xg-X8-pf8" customClass="InterestsScreenViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gVd-NO-PeV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -361,8 +361,8 @@ questions for you.</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-BQ-QJS">
-                                <rect key="frame" x="26" y="103" width="341" height="310"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-BQ-QJS">
+                                <rect key="frame" x="16" y="103" width="361" height="310"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="310" id="ckm-pq-Oci"/>
@@ -419,8 +419,8 @@ questions for you.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bmG-rY-4A2">
-                                <rect key="frame" x="41" y="459" width="311" height="314"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bmG-rY-4A2">
+                                <rect key="frame" x="16" y="459" width="361" height="314"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RdG-ra-huG">
                                     <size key="itemSize" width="325" height="270"/>
@@ -486,16 +486,16 @@ questions for you.</string>
                             <constraint firstItem="Q3d-08-riu" firstAttribute="top" secondItem="MhC-BQ-QJS" secondAttribute="bottom" constant="10" id="0Ju-Mr-U46"/>
                             <constraint firstItem="MhC-BQ-QJS" firstAttribute="top" secondItem="lYT-PO-osr" secondAttribute="bottom" constant="20" id="2ES-Vl-bru"/>
                             <constraint firstItem="eFe-Nq-yBO" firstAttribute="leading" secondItem="Q3d-08-riu" secondAttribute="trailing" constant="27" id="3B0-uz-NjT"/>
+                            <constraint firstItem="MhC-BQ-QJS" firstAttribute="trailing" secondItem="3Hk-Lm-1YW" secondAttribute="trailingMargin" id="4uH-HI-O5J"/>
                             <constraint firstItem="bmG-rY-4A2" firstAttribute="top" secondItem="eFe-Nq-yBO" secondAttribute="bottom" constant="10" id="CuJ-Ko-WLq"/>
-                            <constraint firstItem="bmG-rY-4A2" firstAttribute="leading" secondItem="3Hk-Lm-1YW" secondAttribute="leadingMargin" constant="25" id="F95-Zf-Nfz"/>
+                            <constraint firstItem="bmG-rY-4A2" firstAttribute="leading" secondItem="3Hk-Lm-1YW" secondAttribute="leadingMargin" id="F95-Zf-Nfz"/>
                             <constraint firstItem="sHM-rv-Zhe" firstAttribute="top" secondItem="ObC-sd-YOa" secondAttribute="bottom" constant="10" id="I9m-4g-S22"/>
-                            <constraint firstItem="MhC-BQ-QJS" firstAttribute="leading" secondItem="3Hk-Lm-1YW" secondAttribute="leadingMargin" constant="10" id="LRa-gA-X9D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="MhC-BQ-QJS" secondAttribute="trailing" constant="10" id="Pv7-DN-Je3"/>
+                            <constraint firstItem="MhC-BQ-QJS" firstAttribute="leading" secondItem="3Hk-Lm-1YW" secondAttribute="leadingMargin" id="QW8-1q-2Ih"/>
                             <constraint firstItem="lYT-PO-osr" firstAttribute="top" secondItem="ObC-sd-YOa" secondAttribute="bottom" constant="10" id="YB1-J8-P3v"/>
                             <constraint firstItem="eFe-Nq-yBO" firstAttribute="top" secondItem="MhC-BQ-QJS" secondAttribute="bottom" constant="10" id="aGU-Zb-NiG"/>
                             <constraint firstItem="pUL-Jw-n5A" firstAttribute="top" secondItem="bmG-rY-4A2" secondAttribute="bottom" constant="30" id="dme-ER-pFv"/>
                             <constraint firstItem="sHM-rv-Zhe" firstAttribute="leading" secondItem="lYT-PO-osr" secondAttribute="trailing" constant="27" id="fGa-Pl-d2L"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bmG-rY-4A2" secondAttribute="trailing" constant="25" id="mCg-2k-9Cn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bmG-rY-4A2" secondAttribute="trailing" id="mCg-2k-9Cn"/>
                             <constraint firstItem="Q3d-08-riu" firstAttribute="leading" secondItem="3Hk-Lm-1YW" secondAttribute="leadingMargin" constant="10" id="nFH-j0-Ed3"/>
                             <constraint firstItem="lYT-PO-osr" firstAttribute="leading" secondItem="3Hk-Lm-1YW" secondAttribute="leadingMargin" constant="25" id="wUR-Tj-eRC"/>
                         </constraints>
@@ -597,12 +597,12 @@ questions for you.</string>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="188" height="285"/>
                                         <connections>
-                                            <outlet property="ivLogo" destination="tmY-Gz-8Vf" id="ddE-Va-TrE"/>
-                                            <outlet property="lblBestseller" destination="NQi-7X-whK" id="9C0-EZ-lbU"/>
-                                            <outlet property="lblPrice" destination="cM4-5W-5QX" id="MeB-HR-pXz"/>
-                                            <outlet property="lblSoldout" destination="qZW-uk-H6D" id="Q9F-CY-ZS5"/>
-                                            <outlet property="lblSubtitle" destination="IRd-iu-uZo" id="OmW-jg-o4P"/>
-                                            <outlet property="lblTitle" destination="Lc9-JN-LY5" id="SQv-cd-RvX"/>
+                                            <outlet property="bestseller" destination="NQi-7X-whK" id="9C0-EZ-lbU"/>
+                                            <outlet property="logo" destination="tmY-Gz-8Vf" id="ddE-Va-TrE"/>
+                                            <outlet property="price" destination="cM4-5W-5QX" id="MeB-HR-pXz"/>
+                                            <outlet property="soldout" destination="qZW-uk-H6D" id="Q9F-CY-ZS5"/>
+                                            <outlet property="subtitle" destination="IRd-iu-uZo" id="OmW-jg-o4P"/>
+                                            <outlet property="title" destination="Lc9-JN-LY5" id="SQv-cd-RvX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -813,7 +813,7 @@ questions for you.</string>
                             <constraint firstAttribute="trailing" secondItem="VRz-rn-x1b" secondAttribute="trailing" id="yoL-LX-8jC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Shop" id="Sic-W2-FdA"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="Shop" id="Sic-W2-FdA"/>
                     <navigationItem key="navigationItem" id="mQ9-J2-YOK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -844,11 +844,11 @@ questions for you.</string>
             </objects>
             <point key="canvasLocation" x="3937" y="435"/>
         </scene>
-        <!--Bug-->
+        <!--Bag-->
         <scene sceneID="kMj-qy-B1U">
             <objects>
                 <navigationController id="qXo-iU-znk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bug" image="Bug" id="2rk-Wn-ukG"/>
+                    <tabBarItem key="tabBarItem" title="Bag" image="Bag" id="2rk-Wn-ukG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Ln-Ju-7Xd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -874,7 +874,7 @@ questions for you.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="Bug" width="22" height="22"/>
+        <image name="Bag" width="22" height="22"/>
         <image name="Favourites" width="28" height="28"/>
         <image name="Home" width="20" height="20"/>
         <image name="Image 1" width="47.666667938232422" height="70"/>

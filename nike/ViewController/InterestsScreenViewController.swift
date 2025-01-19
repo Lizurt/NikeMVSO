@@ -14,7 +14,7 @@ class InterestItemViewCell: UITableViewCell {
     @IBOutlet weak var radioButton: UIButton!
 }
 
-class InterestListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class InterestsScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var interestsTableView: UITableView!
     @IBOutlet weak var buttonNext: UIButton!

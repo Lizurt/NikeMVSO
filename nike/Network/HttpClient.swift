@@ -1,14 +1,14 @@
 //
-//  APIManager.swift
-//  NikeProgram
+//  HttpClient.swift
+//  nike
 //
-//  Created by Олеся Бондарева on 30.11.2024.
+//  Created by Pasha on 19.01.2025.
 //
 
 import Foundation
 
-class APIManager {
-    static let sharedInstance = APIManager()
+final class HttpClient {
+    static let sharedInstance = HttpClient()
     
     func get<T: Decodable>(withUrl: URL, completion: @escaping (Result<T, Error>) -> Void) {
         let session = URLSession.shared
@@ -39,4 +39,6 @@ class APIManager {
         })
         task.resume()
     }
+    
+    private init() {}
 }
