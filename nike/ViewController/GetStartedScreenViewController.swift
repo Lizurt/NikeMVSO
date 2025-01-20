@@ -11,8 +11,9 @@ class GetStartedScreenViewController: UIViewController {
     
     @IBOutlet weak var gradientView: UIView!
     
-    private let fadeToBlackKeyPoints: [Float] = [0, 0.5, 1]
+    private let fadeToBlackKeyPoints: [Float] = [0, 0.15, 0.5, 1]
     private let fadeToBlackLayerColors: [CGColor] = [
+        UIColor.black,
         UIColor.black,
         UIColor.clear,
         UIColor.black

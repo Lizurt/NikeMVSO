@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dJi-Uf-gVu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BmN-PM-f9K">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="2ml-vN-VPM">
+            <objects>
+                <viewController id="BmN-PM-f9K" customClass="SplashScreenViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eTP-GV-Zb8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="oxa-Wy-wYh">
+                                <rect key="frame" x="16" y="59" width="361" height="759"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Za-nW-8Nz"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oxa-Wy-wYh" secondAttribute="trailing" id="GMt-VX-f46"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="oxa-Wy-wYh" secondAttribute="bottom" id="bBb-Qk-gcw"/>
+                            <constraint firstItem="oxa-Wy-wYh" firstAttribute="top" secondItem="eTP-GV-Zb8" secondAttribute="topMargin" id="iW4-9e-DZZ"/>
+                            <constraint firstItem="oxa-Wy-wYh" firstAttribute="leading" secondItem="eTP-GV-Zb8" secondAttribute="leadingMargin" id="zMt-GJ-nuG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImage" destination="oxa-Wy-wYh" id="vPE-BM-V28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="878-bt-FZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1178" y="-31"/>
+        </scene>
         <!--Welcome Screen View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -25,17 +53,32 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Eag-Ha-8bE">
                                 <rect key="frame" x="-25" y="359" width="193" height="159"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEo-LG-beD">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEo-LG-beD">
                                 <rect key="frame" x="25" y="484" width="368" height="334"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
-                                <string key="text">Nike App 
-Bringing Nike Members the best products, inspiration and stories in sport.</string>
-                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Nike App 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99661844968795776" green="0.99661833047866821" blue="0.99661844968795776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="Inter28pt-Bold"/>
+                                            <font key="NSOriginalFont" size="30" name="Inter28pt-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Bringing Nike Members the best products, inspiration and stories in sport.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99661844968795776" green="0.99661833047866821" blue="0.99661844968795776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="30" name="Inter28pt-Bold"/>
+                                            <font key="NSOriginalFont" size="30" name="Inter28pt-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3g-8a-Qtu">
@@ -98,13 +141,12 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xCG-4y-0uk">
-                                <rect key="frame" x="9" y="0.0" width="393" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="black"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="P12-JS-h3O">
-                                <rect key="frame" x="16" y="-112" width="170" height="306"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="P12-JS-h3O">
+                                <rect key="frame" x="16" y="-110" width="167" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="trb-gq-jZI"/>
+                                    <constraint firstAttribute="width" constant="167" id="vIJ-pM-Ipu"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image 2" translatesAutoresizingMaskIntoConstraints="NO" id="nuq-0a-dRR">
                                 <rect key="frame" x="201" y="0.0" width="176" height="116"/>
@@ -142,7 +184,7 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLq-PM-eEn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" allowsEditingTextAttributes="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLq-PM-eEn">
                                 <rect key="frame" x="25" y="100" width="343" height="300"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -151,12 +193,23 @@ Bringing Nike Members the best products, inspiration and stories in sport.</stri
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="mj2-dG-hez"/>
                                 </constraints>
-                                <string key="text">To personalize your
-experience and 
-connect you to sport, we've got a few 
-questions for you.</string>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="To personalize your experience and connect you to sport, we've got a few ">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Inter-Regular_Bold"/>
+                                            <font key="NSOriginalFont" size="32" name="Inter-Regular_Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="questions for you.">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="32" name="Inter-Regular_ExtraBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-KQ-8SW">
@@ -178,11 +231,11 @@ questions for you.</string>
                         <viewLayoutGuide key="safeArea" id="LkR-zD-c2F"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="lHL-KQ-8SW" secondAttribute="bottom" constant="50" id="2e5-hy-H0f"/>
-                            <constraint firstItem="P12-JS-h3O" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" constant="10" id="5bf-yR-w8U"/>
+                            <constraint firstItem="P12-JS-h3O" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" constant="16" id="5bf-yR-w8U"/>
                             <constraint firstItem="eLq-PM-eEn" firstAttribute="top" secondItem="FCX-LY-OzA" secondAttribute="top" constant="100" id="AMY-Rv-eNZ"/>
                             <constraint firstAttribute="trailing" secondItem="lHL-KQ-8SW" secondAttribute="trailing" constant="100" id="AvE-YZ-ILJ"/>
                             <constraint firstAttribute="trailing" secondItem="J4D-cS-ht7" secondAttribute="trailing" id="KnO-1T-2w7"/>
-                            <constraint firstItem="P12-JS-h3O" firstAttribute="top" secondItem="FCX-LY-OzA" secondAttribute="top" constant="-50" id="VOa-px-edR"/>
+                            <constraint firstItem="P12-JS-h3O" firstAttribute="top" secondItem="FCX-LY-OzA" secondAttribute="top" constant="-110" id="VOa-px-edR"/>
                             <constraint firstAttribute="trailing" secondItem="eLq-PM-eEn" secondAttribute="trailing" constant="25" id="dno-yi-kpK"/>
                             <constraint firstItem="eLq-PM-eEn" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" constant="25" id="dtZ-9w-qii"/>
                             <constraint firstItem="lHL-KQ-8SW" firstAttribute="leading" secondItem="FCX-LY-OzA" secondAttribute="leading" constant="100" id="eU7-wH-ANN"/>
@@ -198,7 +251,7 @@ questions for you.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wov-5r-0ek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="-27"/>
+            <point key="canvasLocation" x="861.83206106870227" y="-27.464788732394368"/>
         </scene>
         <!--Interests Screen View Controller-->
         <scene sceneID="SdD-HB-ByB">
@@ -297,20 +350,6 @@ questions for you.</string>
             </objects>
             <point key="canvasLocation" x="1765.6488549618321" y="-27.464788732394368"/>
         </scene>
-        <!--Splash Screen View Controller-->
-        <scene sceneID="nwf-Sg-5Sf">
-            <objects>
-                <viewController storyboardIdentifier="SplashScreen" id="dJi-Uf-gVu" customClass="SplashScreenViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" id="jEm-hb-aDD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
-                    </imageView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tr9-xQ-lFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1060" y="-27"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3xt-sX-gga">
             <objects>
@@ -363,11 +402,11 @@ questions for you.</string>
                         <viewControllerLayoutGuide type="bottom" id="pUL-Jw-n5A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Hk-Lm-1YW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-BQ-QJS">
-                                <rect key="frame" x="16" y="103" width="361" height="310"/>
+                                <rect key="frame" x="16" y="162" width="361" height="310"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="310" id="ckm-pq-Oci"/>
@@ -430,7 +469,7 @@ questions for you.</string>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended for You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3d-08-riu">
-                                <rect key="frame" x="26" y="433" width="217" height="21"/>
+                                <rect key="frame" x="26" y="492" width="217" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cCb-Rf-0ss"/>
                                 </constraints>
@@ -439,7 +478,7 @@ questions for you.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bmG-rY-4A2">
-                                <rect key="frame" x="16" y="459" width="361" height="314"/>
+                                <rect key="frame" x="16" y="518" width="361" height="270"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RdG-ra-huG">
                                     <size key="itemSize" width="325" height="270"/>
@@ -449,7 +488,7 @@ questions for you.</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellShoe" id="otI-5x-yD3" customClass="HomeCollectionViewShopCell" customModule="nike" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22" width="325" height="270"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="270"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1zy-qZ-zjg">
                                             <rect key="frame" x="0.0" y="0.0" width="325" height="270"/>
@@ -470,7 +509,7 @@ questions for you.</string>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop My Interests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYT-PO-osr">
-                                <rect key="frame" x="26" y="54" width="203" height="29"/>
+                                <rect key="frame" x="26" y="113" width="203" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="203" id="AP6-QJ-E6p"/>
                                     <constraint firstAttribute="height" constant="29" id="uMd-Ce-12O"/>
@@ -480,7 +519,7 @@ questions for you.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHM-rv-Zhe">
-                                <rect key="frame" x="256" y="54" width="117" height="35"/>
+                                <rect key="frame" x="256" y="113" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Interest">
                                     <color key="baseForegroundColor" systemColor="systemGray2Color"/>
@@ -903,7 +942,7 @@ questions for you.</string>
             <objects>
                 <viewController id="fDG-l6-ZFf" userLabel="NikeWebView" customClass="NikeAccountWebViewViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tyb-kS-fcd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="9KL-Re-1mp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -917,7 +956,8 @@ questions for you.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pRc-Ww-nSU"/>
+        <segue reference="ip2-Bd-CnQ"/>
+        <segue reference="xHX-cv-WH6"/>
         <segue reference="7S2-9d-w5D"/>
     </inferredMetricsTieBreakers>
     <resources>
