@@ -6,6 +6,7 @@
 //
 
 struct Interest {
+    
     let title: String
     let imageName: String
 }

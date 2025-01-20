@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIColor {
+    
     convenience init(hex: String) {
         var cleanedHex = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         if cleanedHex.hasPrefix("#") {

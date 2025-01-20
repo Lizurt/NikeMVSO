@@ -8,6 +8,7 @@
 import UIKit
 
 struct CollectionItem {
+    
     var title: String
     var image: UIImage
 }

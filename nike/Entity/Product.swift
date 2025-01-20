@@ -8,6 +8,7 @@
 import Foundation
 
 struct Product: Codable {
+    
     var brand: String
     var productName: String
     var price: Double

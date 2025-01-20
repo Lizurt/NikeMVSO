@@ -8,7 +8,10 @@
 import Foundation
 
 final class HttpClient {
+    
     static let sharedInstance = HttpClient()
+    
+    private init() {}
     
     func get<T: Decodable>(withUrl: URL, completion: @escaping (Result<T, Error>) -> Void) {
         let session = URLSession.shared
@@ -25,7 +28,7 @@ final class HttpClient {
                 return
             }
             do {
-                let decoder = JSONDecoder ()
+                let decoder = JSONDecoder()
                 let response = try decoder.decode(T.self, from: strongData)
                 DispatchQueue.main.async {
                     completion(.success(response))
@@ -39,6 +42,4 @@ final class HttpClient {
         })
         task.resume()
     }
-    
-    private init() {}
 }

@@ -1,8 +1,8 @@
 //
 //  CollectionViewShopCell.swift
-//  NikeProgram
+//  nike
 //
-//  Created by Олеся Бондарева on 23.12.2024.
+//  Created by Pasha on 23.12.2024.
 //
 
 import UIKit

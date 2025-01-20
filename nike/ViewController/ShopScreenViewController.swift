@@ -1,28 +1,29 @@
 //
-//  ShopController.swift
-//  NikeProgram
+//  ShopScreenViewController.swift
+//  nike
 //
 //  Created by Pasha on 23.12.2024.
 //
 
 import UIKit
 
-class ShopController: UIViewController {
+class ShopScreenViewController: UIViewController {
     
     @IBOutlet weak var slider: UIView!
-    @IBOutlet weak var Men: UIButton!
-    @IBOutlet weak var Women: UIButton!
-    @IBOutlet weak var Kids: UIButton!
+    @IBOutlet weak var menSectionButton: UIButton!
+    @IBOutlet weak var womenSectionButton: UIButton!
+    @IBOutlet weak var kidsSectionButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
-    private var selectedButton: UIButton?
+    private var selectedSectionButton: UIButton?
     
     private var shopCarouselItemProvider = ShopCarouselItemStaticProvider()
     private var carouselItems: [ShopCarouselItem] = []
     
-    let imageList = ["Image10", "Image10", "Image10"]
-    let labelList = ["New & Featured", "Shoes", "Clothes"]
+    // todo: move to provider
+    private let imageList = ["Image10", "Image11", "Image10"]
+    private let labelList = ["New & Featured", "Shoes", "Clothes"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,33 +39,31 @@ class ShopController: UIViewController {
         tableView.delegate = self
         
         self.view.tintColor = UIColor.lightGray
-        selectedButton = Men
-        Men.setTitleColor(.black, for: .normal)
+        selectedSectionButton = menSectionButton
+        menSectionButton.setTitleColor(.black, for: .normal)
         
-        Men.addTarget(self, action: #selector(menTapped), for: .touchUpInside)
-        Women.addTarget(self, action: #selector(womenTapped), for: .touchUpInside)
-        Kids.addTarget(self, action: #selector(kidsTapped), for: .touchUpInside)
+        menSectionButton.addTarget(self, action: #selector(menTapped), for: .touchUpInside)
+        womenSectionButton.addTarget(self, action: #selector(womenTapped), for: .touchUpInside)
+        kidsSectionButton.addTarget(self, action: #selector(kidsTapped), for: .touchUpInside)
     }
     
-    @objc func menTapped() {
-        moveSlider(to: Men)
+    @objc private func menTapped() {
+        moveSlider(to: menSectionButton)
     }
     
-    @objc func womenTapped() {
-        moveSlider(to: Women)
+    @objc private func womenTapped() {
+        moveSlider(to: womenSectionButton)
     }
     
-    @objc func kidsTapped() {
-        moveSlider(to: Kids)
+    @objc private func kidsTapped() {
+        moveSlider(to: kidsSectionButton)
     }
     
-    func moveSlider(to button: UIButton) {
-        // устанавливаем цвет предыдущей кнопки как серый
-        selectedButton?.setTitleColor(.lightGray, for: .normal)
+    private func moveSlider(to button: UIButton) {
+        selectedSectionButton?.setTitleColor(.lightGray, for: .normal)
         
-        // устанавливаем текущей кнопки как черный
-        selectedButton = button
-        selectedButton?.setTitleColor(.black, for: .normal)
+        selectedSectionButton = button
+        selectedSectionButton?.setTitleColor(.black, for: .normal)
         
         let buttonWidth = button.frame.width
         let buttonX = button.frame.origin.x
@@ -76,7 +75,7 @@ class ShopController: UIViewController {
     }
 }
 
-extension ShopController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension ShopScreenViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return carouselItems.count
     }
@@ -95,11 +94,12 @@ extension ShopController: UICollectionViewDataSource, UICollectionViewDelegateFl
         return CGSize(width: 220, height: 290)
     }
 }
-extension ShopController: UICollectionViewDelegate {
+
+extension ShopScreenViewController: UICollectionViewDelegate {
     
 }
 
-extension ShopController: UITableViewDataSource, UITableViewDelegate {
+extension ShopScreenViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return imageList.count

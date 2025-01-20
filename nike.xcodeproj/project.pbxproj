@@ -52,8 +52,6 @@
 		C409E3882D3D54A1006F69AF /* Entity */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Entity; sourceTree = "<group>"; };
 		C409E3922D3D5D91006F69AF /* Network */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Network; sourceTree = "<group>"; };
 		C409E3932D3D6506006F69AF /* Extension */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extension; sourceTree = "<group>"; };
-		C4F468A82D3BE73E00F3A181 /* BestSeller */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = BestSeller; sourceTree = "<group>"; };
-		C4F468AC2D3BE73E00F3A181 /* Shop */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Shop; sourceTree = "<group>"; };
 		C4F468BF2D3BFF0700F3A181 /* ViewController */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewController; sourceTree = "<group>"; };
 		C4F468C32D3BFF3100F3A181 /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -112,8 +110,6 @@
 				C409E37F2D3D4DD6006F69AF /* Provider */,
 				C4F468C32D3BFF3100F3A181 /* View */,
 				C4F468BF2D3BFF0700F3A181 /* ViewController */,
-				C4F468A82D3BE73E00F3A181 /* BestSeller */,
-				C4F468AC2D3BE73E00F3A181 /* Shop */,
 				A72EB2A22CD6429A00939C01 /* AppDelegate.swift */,
 				A72EB2A42CD6429A00939C01 /* SceneDelegate.swift */,
 				A72EB2AB2CD6429B00939C01 /* Assets.xcassets */,
@@ -160,8 +156,6 @@
 				C409E3882D3D54A1006F69AF /* Entity */,
 				C409E3922D3D5D91006F69AF /* Network */,
 				C409E3932D3D6506006F69AF /* Extension */,
-				C4F468A82D3BE73E00F3A181 /* BestSeller */,
-				C4F468AC2D3BE73E00F3A181 /* Shop */,
 				C4F468BF2D3BFF0700F3A181 /* ViewController */,
 				C4F468C32D3BFF3100F3A181 /* View */,
 			);

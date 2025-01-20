@@ -18,6 +18,7 @@ private let interestItems: [Interest] = [
 ]
 
 protocol InterestsProvider {
+    
     func provide() -> [Interest]
 }
 

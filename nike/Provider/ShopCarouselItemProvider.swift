@@ -11,6 +11,7 @@ private var carouselItems: [ShopCarouselItem] = [
 ]
 
 protocol ShopCarouselItemProvider {
+    
     func provide() -> [ShopCarouselItem]
 }
 

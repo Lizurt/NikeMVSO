@@ -6,6 +6,7 @@
 //
 
 struct ShopCarouselItem {
+    
     let title: String
     let imageName: String
 }

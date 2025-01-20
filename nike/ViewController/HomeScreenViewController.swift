@@ -1,34 +1,23 @@
 //
 //  HomeViewController.swift
-//  NikeProgram
+//  nike
 //
 //  Created by Pasha on 19.01.2025.
 //
 
-// пятый экран (Home)
-
 import UIKit
 
-class CollectionViewInterestsCell: UICollectionViewCell {
+class HomeScreenViewController: UIViewController {
     
-    @IBOutlet weak var imageInterestCell: UIImageView!
-    @IBOutlet weak var labelInterestCell: UILabel!
-}
-
-class HomeCollectionViewShopCell: UICollectionViewCell {
-
-    @IBOutlet weak var imageShopCell: UIImageView!
-}
-
-class HomeViewController: UIViewController {
     @IBOutlet weak var interestsCollectionView: UICollectionView!
     @IBOutlet weak var shoeCollectionView: UICollectionView!
     
+    // todo: move to provider
     var interestCollectionCell: [CollectionItem] = [
         CollectionItem(title: "Running", image: UIImage(named: "ImageHome1")!),
         CollectionItem(title: "Stretching", image: UIImage(named: "ImageHome2")!)
     ]
-
+    
     let shoeCollectionCell = ["whiteShoe", "blackShoe", "blueShoe"]
     
     override func viewDidLoad() {
@@ -36,13 +25,14 @@ class HomeViewController: UIViewController {
         
         interestsCollectionView.dataSource = self
         interestsCollectionView.delegate = self
-    
+        
         shoeCollectionView.dataSource = self
         shoeCollectionView.delegate = self
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+extension HomeScreenViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ сollectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if сollectionView == interestsCollectionView {
             return interestCollectionCell.count
@@ -76,6 +66,6 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
+extension HomeScreenViewController: UICollectionViewDelegate {
     
 }
