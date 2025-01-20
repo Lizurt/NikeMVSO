@@ -402,11 +402,11 @@
                         <viewControllerLayoutGuide type="bottom" id="pUL-Jw-n5A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Hk-Lm-1YW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="803"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MhC-BQ-QJS">
-                                <rect key="frame" x="16" y="162" width="361" height="310"/>
+                                <rect key="frame" x="16" y="103" width="361" height="310"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="310" id="ckm-pq-Oci"/>
@@ -469,7 +469,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended for You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3d-08-riu">
-                                <rect key="frame" x="26" y="492" width="217" height="21"/>
+                                <rect key="frame" x="26" y="433" width="217" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cCb-Rf-0ss"/>
                                 </constraints>
@@ -478,7 +478,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bmG-rY-4A2">
-                                <rect key="frame" x="16" y="518" width="361" height="270"/>
+                                <rect key="frame" x="16" y="459" width="361" height="314"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RdG-ra-huG">
                                     <size key="itemSize" width="325" height="270"/>
@@ -488,7 +488,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellShoe" id="otI-5x-yD3" customClass="HomeCollectionViewShopCell" customModule="nike" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="325" height="270"/>
+                                        <rect key="frame" x="0.0" y="22" width="325" height="270"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1zy-qZ-zjg">
                                             <rect key="frame" x="0.0" y="0.0" width="325" height="270"/>
@@ -509,7 +509,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop My Interests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYT-PO-osr">
-                                <rect key="frame" x="26" y="113" width="203" height="29"/>
+                                <rect key="frame" x="26" y="54" width="203" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="203" id="AP6-QJ-E6p"/>
                                     <constraint firstAttribute="height" constant="29" id="uMd-Ce-12O"/>
@@ -519,7 +519,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHM-rv-Zhe">
-                                <rect key="frame" x="256" y="113" width="117" height="35"/>
+                                <rect key="frame" x="256" y="54" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Interest">
                                     <color key="baseForegroundColor" systemColor="systemGray2Color"/>
@@ -735,7 +735,7 @@
                                         <state key="normal" title="Kids"/>
                                     </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KH6-Mw-ZQc">
-                                        <rect key="frame" x="0.0" y="35" width="75" height="5"/>
+                                        <rect key="frame" x="0.0" y="35" width="75" height="3"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -942,7 +942,7 @@
             <objects>
                 <viewController id="fDG-l6-ZFf" userLabel="NikeWebView" customClass="NikeAccountWebViewViewController" customModule="nike" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tyb-kS-fcd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="9KL-Re-1mp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -956,8 +956,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ip2-Bd-CnQ"/>
-        <segue reference="xHX-cv-WH6"/>
+        <segue reference="pRc-Ww-nSU"/>
         <segue reference="7S2-9d-w5D"/>
     </inferredMetricsTieBreakers>
     <resources>

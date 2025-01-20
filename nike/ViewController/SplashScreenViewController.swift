@@ -17,10 +17,10 @@ class SplashScreenViewController: UIViewController {
         self.logoImage.alpha = 0.0
         
         // fixme: ужас
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 1.0, animations: {
             self.logoImage.alpha = 1.0
         }) { _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 self.goToMainScreen()
             }
         }
